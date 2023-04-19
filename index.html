@@ -25,10 +25,12 @@
 
                 <div id="slider" class="d-flex justify-content-between">
                     <div id="item" class="position-relative">
-                        <img src="./assets/img/01.webp">
+                        <img v-bind:src="imgPath + slides[currentActive].image">
                         <div id="img-info" class="text-light position-absolute bottom-0 end-0 w-75 text-end me-3">
-                            <h2>hjghkjhkj</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim in consequatur numquam deserunt iusto nulla quaerat quae. Tenetur, nobis. Iusto voluptatum molestias dolorem enim optio culpa, minima omnis. Facilis, vitae.</p>
+                            <h2>{{slides[currentActive].title}}</h2>
+                            <p>
+                                {{slides[currentActive].text}}
+                            </p>
                         </div>
 
                     </div>
