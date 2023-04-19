@@ -49,6 +49,21 @@ createApp({
             this.currentActive = i
         },
         
+        prevImg() {
+            if (this.currentActive == 0) {
+                this.currentActive = this.slides.length - 1
+            } else {
+                this.currentActive--
+            }
+        },
+
+        nextImg() {
+            if (this.currentActive === this.slides.length- 1) {
+                this.currentActive = 0
+            } else {
+                this.currentActive++
+            }
+        },
 
     }
 }).mount('#app')
