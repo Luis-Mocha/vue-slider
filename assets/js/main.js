@@ -64,7 +64,12 @@ createApp({
         autoScrollFunction () {
             this.scrollVariabile = setInterval ( ()=> {
                 this.nextImg()
-            }, 2000)
+            }, 3000)
         },
+
+        stopScroll() {
+            clearInterval( this.scrollVariabile)
+            this.scrollVariabile = null
+        }
     }
 }).mount('#app')
