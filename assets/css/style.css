@@ -22,14 +22,23 @@
 #thumbs {
     width: 20%;
     height: 100%;
-    border: 2px solid red;
 }
 
 #thumbs img {
     height: calc(100% / 5);
     object-fit: cover;
     cursor: pointer;
+    filter: brightness(0.5);
 } 
+
+#thumbs img:hover {
+    filter: brightness(0.8);
+} 
+
+#thumbs img.active {
+    filter: brightness(1);
+    border: 3px inset white;
+}
 
 #prevBtn,
 #nextBtn {
@@ -44,7 +53,6 @@
 
 #prevBtn:hover,
 #nextBtn:hover {
-    
     background-color: rgba(156, 148, 148, 0.5);
     color: white;
 }

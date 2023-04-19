@@ -42,7 +42,7 @@
                     </div>
                     <!-- thumbs -->
                     <div id="thumbs" class="position-relative d-flex flex-column">
-                        <img v-for="(element, index) in slides" v-bind:src="imgPath + element.image" v-bind:alt=" `Foto Thumb ${index}`" @click="changeImg(index)">
+                        <img v-for="(element, index) in slides" v-bind:src="imgPath + element.image" v-bind:alt=" `Foto Thumb ${index}`" @click="changeImg(index)" v-bind:class=" (currentActive == index) ? 'active' : '' ">
                     </div>
 
                     <!-- nextBtn -->
