@@ -35,7 +35,7 @@
 
                     </div>
                     <div id="thumbs" class="position-relative d-flex flex-column">
-                        <img v-for="(element, index) in slides" v-bind:src="imgPath + element.image" v-bind:alt=" `Foto Thumb ${index}`">
+                        <img v-for="(element, index) in slides" v-bind:src="imgPath + element.image" v-bind:alt=" `Foto Thumb ${index}`" @click="changeImg(index)">
 
                         <div id="prevBtn" class="position-absolute">
                             <i class="fa-solid fa-chevron-up"></i>

@@ -44,6 +44,10 @@ createApp({
 
     methods: {
         // funzioni Vue3
+
+        changeImg(i) {
+            this.currentActive = i
+        },
         
 
     }
