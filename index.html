@@ -23,12 +23,24 @@
             <!-- html statico -->
             <div class="container d-flex justify-content-center align-items-center vh-100">
 
-                <div id="slider">
+                <div id="slider" class="d-flex justify-content-between">
                     <div id="item">
                         <img src="./assets/img/01.webp">
 
                     </div>
-                    <div id="thumbs">
+                    <div id="thumbs" class="position-relative d-flex flex-column">
+                        <img src="./assets/img/01.webp" alt="">
+                        <img src="./assets/img/02.webp" alt="">
+                        <img src="./assets/img/03.webp" alt="">
+                        <img src="./assets/img/04.webp" alt="">
+                        <img src="./assets/img/05.webp" alt="">
+
+                        <div id="prevBtn" class="position-absolute">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div id="nextBtn" class="position-absolute">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
 
                     </div>
                 </div>
