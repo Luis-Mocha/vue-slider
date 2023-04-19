@@ -1,10 +1,9 @@
-const {createApp} = Vue
+const {createApp} = Vue;
 
 createApp({
     data() {
         return {
             // variabili Vue3
-
             slides:  [
                 {
                     image: 'img/01.webp',
@@ -28,23 +27,20 @@ createApp({
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
             ],
-
             imgPath: './assets/',
-
             currentActive: 0,
-            
+            scrollVariabile: null,
         }
     },
 
     
     created() { 
         //cicli di vita dei componenti di applicazioni Vue. Vengono eseguite azioni al caricamento dei componenti
-        
+        this.autoScrollFunction()
     },
 
     methods: {
         // funzioni Vue3
-
         changeImg(i) {
             this.currentActive = i
         },
@@ -65,5 +61,10 @@ createApp({
             }
         },
 
+        autoScrollFunction () {
+            this.scrollVariabile = setInterval ( ()=> {
+                this.nextImg()
+            }, 2000)
+        },
     }
 }).mount('#app')
