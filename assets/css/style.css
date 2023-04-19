@@ -29,6 +29,7 @@
 #thumbs img {
     height: calc(100% / 5);
     object-fit: cover;
+    cursor: pointer;
 } 
 
 #prevBtn,

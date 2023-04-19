@@ -23,7 +23,7 @@
             <!-- html statico -->
             <div class="container d-flex justify-content-center align-items-center vh-100">
 
-                <div id="slider" class="d-flex justify-content-between" @mouseover="stopScroll">
+                <div id="slider" class="d-flex justify-content-between" @mouseover="stopScroll" @mouseleave="autoScrollFunction">
                     <div id="item" class="position-relative">
                         <img v-bind:src="imgPath + slides[currentActive].image">
                         <div id="img-info" class="text-light position-absolute bottom-0 end-0 w-75 text-end me-3">
