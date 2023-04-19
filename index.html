@@ -19,11 +19,18 @@
         <!-- #app -->
         <div id="app">
             <!-- il codice html va qui -->
-            
-            <!-- html statico -->
-            <div class="container d-flex justify-content-center align-items-center vh-100">
 
-                <div id="slider" class="d-flex justify-content-between" @mouseover="stopScroll" @mouseleave="autoScrollFunction">
+            <div class="container d-flex justify-content-center align-items-center vh-100">
+                
+                <!-- Slider contente freccie, item e thumb -->
+                <div id="slider" class="d-flex" @mouseover="stopScroll" @mouseleave="autoScrollFunction">
+
+                    <!-- prevBtn -->
+                    <div id="prevBtn" class="d-flex align-items-center" @click="prevImg">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+
+                    <!-- item e thumbs -->
                     <div id="item" class="position-relative">
                         <img v-bind:src="imgPath + slides[currentActive].image">
                         <div id="img-info" class="text-light position-absolute bottom-0 end-0 w-75 text-end me-3">
@@ -32,20 +39,18 @@
                                 {{slides[currentActive].text}}
                             </p>
                         </div>
-
                     </div>
+                    <!-- thumbs -->
                     <div id="thumbs" class="position-relative d-flex flex-column">
                         <img v-for="(element, index) in slides" v-bind:src="imgPath + element.image" v-bind:alt=" `Foto Thumb ${index}`" @click="changeImg(index)">
+                    </div>
 
-                        <div id="prevBtn" class="position-absolute" @click="prevImg">
-                            <i class="fa-solid fa-chevron-up"></i>
-                        </div>
-                        <div id="nextBtn" class="position-absolute" @click="nextImg">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-
+                    <!-- nextBtn -->
+                    <div id="nextBtn" class="d-flex align-items-center" @click="nextImg">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </div>
                 </div>
+                
             </div>
         </div>
     

@@ -7,7 +7,6 @@
 #slider {
     width: 900px;
     height: 400px;
-    background-color: lightblue;
 }
 
 #item {
@@ -23,7 +22,7 @@
 #thumbs {
     width: 20%;
     height: 100%;
-    background-color: lightcoral;
+    border: 2px solid red;
 }
 
 #thumbs img {
@@ -34,22 +33,18 @@
 
 #prevBtn,
 #nextBtn {
-    color: white;
-    font-size: larger;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: rgba(122, 118, 118, 0.8);
+    color: black;
+    font-size: 25px;
     padding: 0 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-#nextBtn {
-    bottom: 0;
+    height: 400px; 
+    
 }
 
 #prevBtn:hover,
 #nextBtn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
+    
+    background-color: rgba(156, 148, 148, 0.5);
+    color: white;
 }
